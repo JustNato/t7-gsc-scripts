@@ -44,6 +44,9 @@ function hp_hud()
 
     point_x = -278.5;
     point_y  = 190;
+	
+    self.point_x = getdvarint("hp_point_x");
+    self.point_y = getdvarint("hp_point_y");   //Dvars for HP Hud Position
     level flag::wait_till("initial_blackscreen_passed");
 
     if(getdvarstring("hp_color") == "") 
@@ -131,6 +134,9 @@ function zm_hud()
 {
     var_x = -188;
     var_y = 188;
+	
+    level.var_x = getdvarint("zm_counter_x");
+    level.var_y = getdvarint("zm_counter_y");   //Dvars for ZM Counter position
 
     infected_count = hud::createserverfontstring("objective", 1.95); //health value
     infected_count hud::setpoint("CENTER", undefined, var_x, var_y );
